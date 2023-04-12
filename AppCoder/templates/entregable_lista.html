@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregables - Lista</title>
+</head>
+<body>
+    <h1>Entregables</h1>
+    <ul>
+        {% for entregable in object_list %}
+            <li>
+                <p>Nombre: {{ entregable.nombre }} </p>
+                <p>
+                    <a href="{% url 'AppCoder:Detalle' entregable.id %}">Ver</a>
+                    <a href="{% url 'AppCoder:Editar' entregable.id %}">Editar</a>
+                    <a href="{% url 'AppCoder:Eliminar' entregable.id %}">Borrar</a>                    
+                </p>
+            </li>
+        {% endfor %}
+        
+    </ul>
+    <a href="{% url 'AppCoder:Entregables' %}" class="btn"> Volver a la pagina de Entregables</a>
+</body>
+</html>

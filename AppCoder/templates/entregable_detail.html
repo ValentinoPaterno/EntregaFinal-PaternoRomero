@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregable - Detalle</title>
+</head>
+<body>
+    <p>Nombre del Entregable: <i>{{ entregable.nombre }}</i></p>
+    <p>Fecha de Entrega: <i>{{ entregable.fecha_de_Entrega }}</i></p>
+    <p>Entregado: <i>{{ entregable.entregado }}</i></p>
+    <p>Imagen <i>{{entregable.imagen}}</i></p>
+    <p>
+        <a href="{% url 'AppCoder:Lista' %}">Regresar</a>
+    </p>
+</body>
+</html>
